@@ -1,0 +1,87 @@
+.footer-phone {
+	height: 100%;
+}
+.btn {
+	font-size: 30px;
+	width: 45px;
+	height: 45px;
+	margin: 10px calc(50% - 26px);
+	padding: 10px 5px 0px;
+	border: solid #fff 1px;
+	border-radius: 26px;
+}
+.text__container-phone {
+	@include flex(row);
+}
+.text-phone {
+	text-align: center;
+}
+.ul-phone {
+	@include flex(row);
+	margin: 45px 0px 40px;
+}
+.li-phone {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	font-size: 25px;
+	width: 30px;
+	height: 30px;
+	padding: 4px;
+	border: solid #fff 1px;
+	border-radius: 26px;
+}
+.end-phone {
+	margin: 10px;
+	text-align: center !important;
+}
+.footer-laptop {
+	display: none;
+}
+@include mq(landscape) {
+	.btn {
+		display: none;
+	}
+}
+@include mq(tablet) {
+	.footer-phone {
+		display: none;	
+	}
+	.footer-laptop {
+		display: block;
+	}
+	.col {
+		display: inline-block;
+		width: calc(100%/3.05);
+		&__head {
+			text-align: center;
+		}
+		&__ul {
+			margin-top: 30px;
+			text-align: center;
+		}
+		&__li {
+			height: 40px;
+			padding: 20px 0;
+			text-align: center;
+		}
+	}
+	.fa-facebook::after {
+		padding: 5px;
+		content: 'Facebook';
+	}
+	.fa-twitter::after {
+		padding: 5px;
+		content: 'Twitter';
+	}
+	.fa-google::after {
+		padding: 5px;
+		content: 'Google';
+	}
+	.end-laptop {
+		margin-top: 30px;
+		text-align: center;
+	}
+}

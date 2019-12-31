@@ -1,0 +1,94 @@
+.logo {
+	width: 85%;
+	margin: 15px 7.5% 0px;
+	position: relative;
+	z-index: 101;
+}
+.search {
+	display: flex;
+	justify-content: center;
+	width: 90%;
+	height: 50px;
+	padding: 15px 5% 20px;
+	&__input {
+		width: calc(100% - 30px);
+		height: 20px;
+		padding: 15px;
+		padding-left: 50px;
+		z-index: 101;
+		border-radius: 25px 0px 0px 25px;
+	}
+	&__btn-468 {
+		position: relative;
+		z-index: 301;
+		left: 15px;
+		height: 40px;
+		margin-top: 5px;
+		margin-right: -16px;
+		display: block;
+	}
+	&__btn {
+		display: none;
+	}
+}
+.links__btn {
+	width: 70px;
+	height: 50px;
+	margin-left: -1px;
+	border-radius: 0px 25px 25px 0px;
+	z-index: 101;
+}
+@include mq(landscape) {
+	.logo {
+		margin: 10px;
+	}
+	.inside {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+	.search {
+		padding: 15px;
+	}
+}
+@include mq(tablet) {
+	.inside {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		padding: 20px;
+	}
+	.logo {
+		display: inline-flex;
+		align-self: auto;
+		width: calc(20vw);
+		margin: 0;
+	}
+	.search {
+		display: flex;
+		justify-content: center;
+		width: calc(55vw - 65px);
+		margin: 0;
+		&__input {
+			width: calc(100% - 80px) !important;
+			padding: 15px;
+			padding-left: 20px;
+			border-radius: 30px 0px 0px 30px;
+			z-index: 0;
+		}
+		&__btn {
+			display: block;
+			width: 50px;
+			height: 50px;
+			border-radius: 0px 30px 30px 0px;
+		}
+		&__btn-468 {
+			display: none;
+		}
+		&__input {
+			border-radius: 30px 0px 0px 30px;
+			width: 60%;
+		}
+	}
+}

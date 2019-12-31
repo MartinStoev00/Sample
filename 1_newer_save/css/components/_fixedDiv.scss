@@ -1,0 +1,117 @@
+.fixedDiv {
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	&__container {
+		@include shadow(mid);
+		@include flex(row);
+		justify-content: center;
+		width: calc(100vw);
+	}
+	&__img {
+		margin: 5px;
+		width: calc(70vw);
+	}
+	&__ul {
+		display: none;
+	}
+	&__search {
+		margin: 5px;
+		&-input {
+			display: none;
+		}
+		&-btn {
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			width: 45px;
+			height: 45px;
+			border-radius: 23px;
+		}
+	}
+	[type = "submit"] {
+		display: none;
+	}
+}
+@include mq(landscape) {
+	.fixedDiv {
+		&__img {
+			width: calc(30vw);
+		}
+		&__search {
+			display: flex;
+			justify-content: center;
+			width: calc(60vw);
+			&-input {
+				display: block;
+				width: calc(100% - 75px);
+				height: 15px;
+				padding: 15px;
+				border-radius: 23px 0px 0px 23px;
+			}
+			&-btn {
+				width: 45px;
+				height: 45px;
+				border-radius: 0px 23px 23px 0px;
+			}
+		}
+		[type = "submit"] {
+			display: inline-block;
+		}
+		[onclick = "go()"] {
+			display: none;
+		}
+	}
+}
+@include mq(tablet) {
+	.fixedDiv {
+		display: none;
+	}
+}
+@include mq(laptop) {
+	.fixedDiv {
+		position: fixed;
+		opacity: 1;
+		display: none;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		[type = "submit"] {
+			display: inline-block;
+		}
+		[onclick = "go()"] {
+			display: none;
+		}
+		&__container {
+			@include flex(row);
+		}
+		&__search {
+			width: calc(26vw);
+			display: flex;
+			justify-content: center;
+			&-input {
+				display: block;
+				width: calc(100% - 75px);
+				height: 15px;
+				padding: 15px;
+				border-radius: 23px 0px 0px 23px;
+			}
+			&-btn {
+				border-radius: 0px 23px 23px 0px;
+			}
+		}
+		&__img {
+			width: calc(14vw);
+		}
+		&__ul {
+			@include flex(row);
+			width: calc(52vw);
+		}
+		&__li {
+			padding: 5px;
+			border-radius: 5px;
+		}
+	}
+}

@@ -1,0 +1,83 @@
+.links__li{
+	font-weight: bold;
+	font-size: calc(20px + (100vw - 320px)/10);
+}
+.search__input {
+	font-family: Helvetica, 'FontAwesome', sans-serif;
+	font-size: 18px;
+}
+.search__input::placeholder {
+	font-size: 18px;
+	margin-top: 2px;
+}
+.anchor__li{
+	font-size: 16px;
+	font-weight: bold;
+}
+.content__head{
+	font-size: 27px;
+}
+.box__text{
+	font-size: 16.5px;
+}
+.first-line{
+	font-size: 25px;
+}
+.second-line{
+	font-size: 20px;
+}
+.footer__phone{
+	font-size: calc(15px + (100vw - 320px)/25);
+}
+@include mq(landscape) {
+	.links__li{
+		font-size: calc(20px + (100vh - 320px)/10);
+	}
+}
+@include mq(tablet) {
+	.links {
+		font-family: arial;
+	}
+	.fixedDiv__ul{
+		font-family: arial;
+	}
+	.links__li{
+		font-size: 12px;
+	}
+	.end-laptop {
+		font-size: 10px;
+	}
+	.col__head {
+		font-size: 40px;
+	}
+	.col__li {
+		font-size: 25px;
+	}
+}
+@include mq(laptop) {
+	.links__a {
+		font-size: 14px;
+		font-weight: 100;
+	}
+	.anchor__li {
+		font-size: calc((100vw/6 - 20px)/10);
+	}
+	.content__head {
+		font-size: 30px;
+	}
+	.content__text {
+		font-size: 23px;
+	}
+	.box__head {
+		font-size: 30px;
+	}
+	.box__text {
+		font-size: 25px;
+	}
+	.col__li {
+		font-size: 33px;
+	}
+	.fixedDiv__search-input::placeholder {
+		font-size: 17px;
+	}
+}

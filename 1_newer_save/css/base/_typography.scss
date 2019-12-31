@@ -1,0 +1,25 @@
+.anchor__li {
+	color: black;
+}
+.links__li,
+.first-line,
+.second-line {
+	color: #111;
+}
+.footer *{
+	color: white;
+}
+.content__head,
+.first-line {
+	font-weight: 600;
+}
+@include mq(tablet) {
+	.links__li {
+		color: #444;
+	}
+}
+@include mq(laptop) {
+	.fixedDiv__li {
+		color: black;
+	}
+}

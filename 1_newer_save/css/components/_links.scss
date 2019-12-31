@@ -1,0 +1,96 @@
+.links {
+	position: fixed;
+	height: 0;
+	left: calc(5vw);
+	top: calc(28vw + 80px);
+	width: calc(90vw);
+	border-radius: 10px;
+	&__triangle {
+		position: fixed;
+		top: calc(28vw + 70px);
+		right: calc(9vw);
+		width: 26px;
+		height: 26px;
+		opacity: 0;
+		transform: rotate(45deg);
+		background-color: $c-l;
+	}
+	&__X {
+		position: fixed;
+		display: none;
+		top: calc(28vw + 100px);
+		right: calc(9vw);
+		width: 15px;
+		height: 15px;
+		padding: 8px;
+		text-align: center;
+		font-family: arial;
+		background-color: rgba(255,255,255, 0.8);
+		color: $c-l;
+		border-radius: 20px;
+	}
+	&__li {
+		text-align: center;
+		line-height: calc( (100vh - 21vw - 125px)/6);
+		display: none;
+	}
+	&__a  {
+		padding-bottom: calc((100vh - 21vw - 125px)/12 - 11px);
+		z-index: 101;
+	}
+}
+@include mq(landscape) {
+	.links {
+		right: calc(5vw);
+		top: 80px;
+		&__triangle {
+			top: 75px;
+			right: calc(5vw + 5px);
+		}
+		&__X {
+			top: 95px;
+		}
+		&__li {
+			float: left;
+			width: 50%;
+			margin: 0;
+			line-height: calc((95vw - 180px)/6);
+		}
+		&__a  {
+			padding-bottom: calc((100vw - 150px)/12 - 11.5px);
+		}
+	}
+}
+@include mq(tablet) {
+	.links {
+		display: flex;
+		justify-content: space-around;
+		align-content: center;
+		align-items: center;
+		position: static;
+		height: initial;
+		border-radius: 0px;
+		visibility: visible;
+		z-index: 0;
+		&__li {
+			display: block;
+			width: calc(7vw);
+			margin: 10px;
+			padding: 0;
+			line-height: 20px;
+		}
+		&__line {
+			width: 1.1px;
+			background-color: #fff;
+			height: 30px;
+			margin: 5px 0;
+		}
+		&__a {
+			padding: 5px 20px;
+			border-radius: 5px;
+		}
+		&__btn {
+			display: none;
+		}
+	}
+}

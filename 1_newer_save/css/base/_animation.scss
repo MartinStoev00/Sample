@@ -1,0 +1,93 @@
+* {
+  transition: 0.2s ease-in-out;
+}
+.links__li,
+.links__X,
+.anchor__li {
+  animation: FadeIn 0.3s linear;
+  animation-fill-mode: both;
+}
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(.1);
+  }
+  85% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.search {
+  &__input:hover,
+  &__input:focus {
+    background-color: $c-l;
+  }
+  &__btn {
+    &:hover,
+    &:focus {
+      background-color: darken($c-l, 10%);
+    }
+  }
+}
+.fixedDiv {
+  &:hover,
+  &:focus{
+    background-color: $c-m;
+  }
+  &__li:hover,
+  &__li:focus {
+    @include shadow(mid);
+    background-color: $c-m;
+    color: black;
+  }
+  &__search {
+    &-input:hover,
+    &-input:focus {
+      background-color: $c-l;
+      @include shadow(outline);
+    }
+    &-btn {
+      &:hover,
+      &:focus {
+        background-color: darken($c-l, 5%);
+      }
+    }
+  }
+}
+@include mq(laptop) {
+  .links__li {
+    animation-delay: 0.3s;
+  }
+  .anchor__li {
+    animation-delay: 0.5s;
+  }
+  .search__input:hover,
+  .search__input:focus {
+    @include shadow(outline);
+  }
+  .links__a:hover,
+  .links__a:focus {
+    @include shadow(mid);
+    background-color: #ccc;
+    text-shadow: 0px 0px 8px #fff;
+  }
+  .anchor__li:hover,
+  .anchor__li:focus {
+    @include shadow(mid);
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, .9);
+    color: #eef;
+    background-color: $c-m;
+    margin-top: 2px;
+  }
+  .col__a:hover,
+  .col__a:focus,
+  .btn:hover,
+  .btn:focus {
+    cursor: pointer;
+    color: $c-m;
+    text-shadow: 0px 0px 5px $c-t-l;
+  }
+}
