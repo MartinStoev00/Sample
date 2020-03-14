@@ -7,14 +7,14 @@
 .search__input {
 	background-color: lighten($c-l, 4% );
 }
-.search__btn-468 {
-	background-color: rgba(0,0,0,0);
-}
-.anchor {
-	background-color: $c-l;
+.search__btn {
+	background-color: $transperant;
 }
 .content__box {
 	background-color: $c-l;
+}
+.links__X {
+	background-color: rgba(255,255,255, 0.8);
 }
 .content__head {
 	background-color: rgba(255,255,255,0.2);
@@ -34,16 +34,13 @@
 .footer {
 	background-color: #333;
 }
-.btn {
+.footer__btn {
 	background-color: #333;
 }
 .fixedDiv{
 	background-color: $c-t-m;
 }
 @include mq(tablet) {
-	.links, .links__container {
-		background-color: #efefef;
-	}
 	.box {
 		background-color: rgba(0,0,0,0);
 	}

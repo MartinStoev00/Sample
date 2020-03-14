@@ -1,87 +1,94 @@
-.footer-phone {
-	height: 100%;
-}
-.btn {
-	font-size: 30px;
-	width: 45px;
-	height: 45px;
-	margin: 10px calc(50% - 26px);
-	padding: 10px 5px 0px;
-	border: solid #fff 1px;
-	border-radius: 26px;
-}
-.text__container-phone {
-	@include flex(row);
-}
-.text-phone {
-	text-align: center;
-}
-.ul-phone {
-	@include flex(row);
-	margin: 45px 0px 40px;
-}
-.li-phone {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-	font-size: 25px;
-	width: 30px;
-	height: 30px;
-	padding: 4px;
-	border: solid #fff 1px;
-	border-radius: 26px;
-}
-.end-phone {
-	margin: 10px;
-	text-align: center !important;
-}
-.footer-laptop {
-	display: none;
+.footer {
+	&__btn {
+		@include size(45px);
+		@include radius(26px);
+		margin: 10px calc(50% - 26px);
+		padding: 10px 5px 0px;
+	}
+	&__text {
+		text-align: center;
+		padding: 10px;
+	}
+	&__text:nth-child(1) {
+		grid-area: address;
+	}
+	&__text:nth-child(2) {
+		grid-area: phones;
+	}
+	&__ul {
+		@include flex(row);
+		grid-area: media;
+	}
+	&__li {
+		@include flex(row);
+		@include size(30px);
+		@include radius(26px);
+		padding: 7px;
+	}
+	&__container {
+		display: grid;
+		grid-template-areas:
+	  	'address'
+	  	'phones'
+	  	'media';
+	  	grid-gap: 20px;
+	}
+	&__end {
+		margin: 10px 10px 0px;
+		text-align: center;
+	}
 }
 @include mq(landscape) {
-	.btn {
-		display: none;
+	.footer {
+		&__btn {
+			display: none;
+		}
+		&__container {
+			grid-template-areas:
+		  	'address phones media';
+		}
+		&__text {
+			width: calc(100vw/3 - 40px);	
+			line-height: 45px;
+		}
+		&__ul {
+			width: calc(100vw/3 - 40px);
+		}
 	}
 }
 @include mq(tablet) {
-	.footer-phone {
-		display: none;	
-	}
-	.footer-laptop {
-		display: block;
-	}
-	.col {
-		display: inline-block;
-		width: calc(100%/3.05);
-		&__head {
-			text-align: center;
-		}
+	.footer {
 		&__ul {
-			margin-top: 30px;
-			text-align: center;
+			@include flex(column);
+			width: calc(100vw/3 - 40px);
 		}
 		&__li {
-			height: 40px;
-			padding: 20px 0;
-			text-align: center;
+			border: none;
 		}
-	}
-	.fa-facebook::after {
-		padding: 5px;
-		content: 'Facebook';
-	}
-	.fa-twitter::after {
-		padding: 5px;
-		content: 'Twitter';
-	}
-	.fa-google::after {
-		padding: 5px;
-		content: 'Google';
-	}
-	.end-laptop {
-		margin-top: 30px;
-		text-align: center;
+		&__text {
+			width: calc(100vw/3 - 40px);	
+			line-height: 55px;
+		}
+		&__container {
+			grid-template-areas:
+		  	'address phones media';
+		}
+		&__btn {
+			display: none;
+		}
+		.fa {
+			&-facebook::after {
+				padding: 8px;
+				content: 'Facebook';
+			}
+			&-twitter::after {
+				padding: 8px;
+				content: 'Twitter';
+			}
+			&-google::after {
+				padding: 8px;
+				content: 'Google';
+			}
+		}
 	}
 }

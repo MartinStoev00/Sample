@@ -3,33 +3,27 @@
       @media only screen and (min-width: 320px) {
         @content;
       }
-   }
-   @else if $size == phoneM {
+   } @else if $size == phoneM {
       @media only screen and (min-width: 375px) {
         @content;
       }
-   }
-   @else if $size == phoneL {
+   } @else if $size == phoneL {
       @media only screen and (min-width: 425px) {
         @content;
       }
-   }
-   @else if $size == tablet {
+   } @else if $size == tablet {
       @media (min-width: 470px) and (min-height: 470px) {
         @content;
       }
-   }
-   @else if $size == laptop {
+   } @else if $size == laptop {
       @media only screen and (min-width: 1024px) {
         @content;
       }
-   }
-   @else if $size == PC {
+   } @else if $size == PC {
       @media only screen and (min-width: 1440px) {
         @content;
       }
-   }
-   @else if $size == landscape {
+   } @else if $size == landscape {
       @media (orientation:landscape) and (max-height: 470px) {
         @content;
       }
@@ -38,14 +32,11 @@
 @mixin shadow($state) {
   @if $state == outline {
     box-shadow: 0 0 7px rgba(0,0,0, 0.3);
-  }
-  @else if $state == small {
+  } @else if $state == small {
     box-shadow:1px 1px 2px 3px rgba(0,0,0, 0.3);
-  } 
-  @else if $state == mid {
+  } @else if $state == mid {
     box-shadow: 0 3px 5px 0 $sh-d, 0 4px 16px 0 $sh-l;
-  } 
-  @else if $state == big {
+  } @else if $state == big {
     box-shadow: 0 3px 50px 0 $sh-d, 0 4px 160px 0 $sh-l;
   } 
 }
@@ -56,12 +47,31 @@
     justify-content: space-around;
     align-content: center;
     align-items: center;
-  }
-  @else if $state == column {
+  } @else if $state == column {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
-  } 
+  } @else if $state == center {
+    display: flex;
+    justify-content: center;
+  }
+}
+@mixin size($pixels) {
+  width: $pixels;
+  height: $pixels;
+}
+@mixin radius($rediusSize) {
+  border: 1px solid #fff;
+  border-radius: $rediusSize;
+}
+@mixin sideRaduis($side, $size) {
+  @if $side == left {
+    border-radius: $size 0px 0px $size;
+  } @else if $side == right {
+    border-radius: 0px $size $size 0px;
+  } @else if $side == center {
+    border-radius: $size;
+  }
 }

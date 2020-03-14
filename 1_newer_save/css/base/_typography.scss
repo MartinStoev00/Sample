@@ -1,10 +1,13 @@
-.anchor__li {
-	color: black;
-}
 .links__li,
 .first-line,
 .second-line {
 	color: #111;
+}
+.links__X {
+	color: $c-l;
+}
+.footer__text::first-line {
+	font-weight: 900;
 }
 .footer *{
 	color: white;

@@ -5,28 +5,14 @@
 	top: calc(28vw + 80px);
 	width: calc(90vw);
 	border-radius: 10px;
-	&__triangle {
-		position: fixed;
-		top: calc(28vw + 70px);
-		right: calc(9vw);
-		width: 26px;
-		height: 26px;
-		opacity: 0;
-		transform: rotate(45deg);
-		background-color: $c-l;
-	}
 	&__X {
+		@include size(15px);
 		position: fixed;
 		display: none;
 		top: calc(28vw + 100px);
 		right: calc(9vw);
-		width: 15px;
-		height: 15px;
 		padding: 8px;
 		text-align: center;
-		font-family: arial;
-		background-color: rgba(255,255,255, 0.8);
-		color: $c-l;
 		border-radius: 20px;
 	}
 	&__li {
@@ -43,10 +29,6 @@
 	.links {
 		right: calc(5vw);
 		top: 80px;
-		&__triangle {
-			top: 75px;
-			right: calc(5vw + 5px);
-		}
 		&__X {
 			top: 95px;
 		}
@@ -63,34 +45,24 @@
 }
 @include mq(tablet) {
 	.links {
-		display: flex;
-		justify-content: space-around;
-		align-content: center;
-		align-items: center;
-		position: static;
-		height: initial;
-		border-radius: 0px;
-		visibility: visible;
-		z-index: 0;
+		all:unset;
+		@include flex(row);
 		&__li {
-			display: block;
-			width: calc(7vw);
-			margin: 10px;
-			padding: 0;
-			line-height: 20px;
-		}
-		&__line {
-			width: 1.1px;
-			background-color: #fff;
-			height: 30px;
-			margin: 5px 0;
+			all:unset;
+ 			transition: 0.2s ease-in-out;
+			margin: 10px 0px;
+			padding: 10px 5px;
+			width: calc(100%/6 - 24px);
+			border-radius: 5px;
+			text-align: center;
 		}
 		&__a {
-			padding: 5px 20px;
-			border-radius: 5px;
-		}
-		&__btn {
-			display: none;
+			all:unset;
+			font-size: 18px;
+ 			transition: 0.2s ease-in-out;
+  			text-decoration: underline;
+  			font-weight: 900;
+			line-height: 25px;
 		}
 	}
 }

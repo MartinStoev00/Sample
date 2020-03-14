@@ -12,8 +12,14 @@
 		<div class="phone__cover" onclick="hide()"></div>
 		<div class="cointainer">
 			<header class="header">
+				<div class="inside">
+					<a href="index.php"><img class="logo" data-src="Pictures/1.png"></a>
+					<form class="search" action="#">
+						<input type="text" class="search__input" onclick="appear()" name="search" autocomplete="off" placeholder="Какво търсите?">
+						<button class="search__btn fa fa-search" type="submit"></button>
+					</form>
+				</div>
 				<div class="links__container">
-					<div class="links__triangle"></div>
 					<div class="links__X" onclick="hide()">X</div>
 					<ul class="links">
 						<li class="links__li"><a class="links__a" href="#">МАГАЗИНИ</a></li>
@@ -29,23 +35,6 @@
 						<li class="links__li"><a class="links__a" href="#">КОНТАКТИ</a></li>
 					</ul>
 				</div>
-				<div class="inside">
-					<a href="index.php"><img class="logo" data-src="Pictures/1.png"></a>
-					<form class="search" action="#">
-						<button class="search__btn-468 fa fa-search" type="submit"></button>
-						<input type="text" class="search__input" onclick="appear()" name="search" autocomplete="off" placeholder="Какво търсите?">
-						<button class="links__btn fa fa-bars" onclick="show()"></button>
-						<button class="search__btn fa fa-search" type="submit"></button>
-					</form>
-				</div>
-				<ul class="anchor" id="nachalo">
-					<li class="anchor__li"><a class="anchor__a" href="#nachalo">Начало</a></li>
-					<li class="anchor__li"><a class="anchor__a" href="#vodospestqvane">ВодоСпестяване</a></li>
-					<li class="anchor__li"><a class="anchor__a" href="#producti">Продукти</a></li>
-					<li class="anchor__li"><a class="anchor__a" href="#montaj">Монтаж</a></li>
-					<li class="anchor__li"><a class="anchor__a" href="#klienti">Клиенти</a></li>
-					<li class="anchor__li"><a class="anchor__a" href="#">Контакти</a></li>
-				</ul>
 			</header>
 			<main class="main">
 				<h2 class="first-line">Да запазим водата и енергията за бъдещето</h2>
@@ -73,7 +62,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="box box__vodospestqvane" id="vodospestqvane">
+				<div class="box box__vodospestqvane">
 					<h2 class="box__head">Да спестим вода, енергия и пари... ?</h2>
 					<div class="box__container">
 						<iframe class="box__img box__video" data-src="https://www.youtube.com/embed/_WInL-tyZ1s"></iframe>
@@ -93,7 +82,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="box box__producti" id="producti">
+				<div class="box box__producti">
 					<h2 class="box__head">Как работят продуктите?</h2>
 					<div class="box__container">
 						<img class="box__img" data-src="Pictures/3/3.4.jpeg">
@@ -116,7 +105,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="box box__montaj" id="montaj">
+				<div class="box box__montaj">
 					<h2 class="box__head">Водоспестяващ аератор – лесен монтаж.</h2>
 					<div class="box__container">
 						<img class="box__img" data-src="Pictures/3/3.5.jpeg">
@@ -130,7 +119,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="box box__clienti" id="klienti">
+				<div class="box box__clienti">
 					<h2 class="box__head">Клиенти</h2>
 					<div class="box__logos">
 						<img class="box__logos-img" data-src="Pictures/4/4.13.png">
@@ -151,59 +140,27 @@
 				</div>
 			</main>
 			<footer class="footer">
-				<div class="footer-phone">
-					<button class="btn fa fa-sort-asc" onclick="go()"></button>
-					<div class="text__container-phone">
-						<p class="text-phone">
-							Adreess: <br>
-							10th, Hadji Stoian Str. <br>
-							5400 Sevlievo, Bulgaria <br>
-							E-mail: sales@aquasto.bg<br>
+				<button class="footer__btn fa fa-sort-asc" onclick="go()"></button>
+					<div class="footer__container">
+						<p class="footer__text">
+							Address: <br>
+							10th, Hadji Stoian Street<br>
+							5400 Sevlievo, Bulgaria<br>
+							e-mail:sales@aquasto.bg<br>
 						</p>
-						<p class="text-phone">
+						<p class="footer__text">
 							Phones: <br>
 							+359 888 924743<br>
 							+359 886 260250<br>
-							+359 675 35861<br>
+							+359 675 358610<br>
 						</p>
-					</div>
-					<ul class="ul-phone">
-						<li class="li-phone"><a href="#" class="fa fa-facebook"></a></li>
-						<li class="li-phone"><a href="#" class="fa fa-twitter"></a></li>
-						<li class="li-phone"><a href="#" class="fa fa-google"></a></li>
-					</ul>
-					<h4 class="end-phone"><a href="http://www.aquasto.eu/">aquasto.eu</a></h4>
-					<h4 class="end-phone">AQUASTO Ltd.</h4>
-					<h4 class="end-phone">Copyright © 2013 Aquasto </h4>
-				</div>
-				<div class="footer-laptop">
-					<div class="col">
-						<h3 class="col__head">Новини</h3>
-						<ul class="col__ul">
-							<li class="col__li"><a class="col__a" href="#">MissionWater</a></li>
-							<li class="col__li"><a class="col__a" href="#">NeoperlNews</a></li>
-							<li class="col__li"><a class="col__a" href="#">NationalGeo</a></li>
+						<ul class="footer__ul">
+							<li class="footer__li"><a href="#" class="fa fa-facebook"></a></li>
+							<li class="footer__li"><a href="#" class="fa fa-twitter"></a></li>
+							<li class="footer__li"><a href="#" class="fa fa-google"></a></li>
 						</ul>
 					</div>
-					<div class="col">
-						<h3 class="col__head">За нас</h3>
-						<ul class="col__ul">
-							<li class="col__li"><a class="col__a" href="#">За нас</a></li>
-							<li class="col__li"><a class="col__a" href="#">Клиенти</a></li>
-							<li class="col__li"><a class="col__a" href="#">Контакти</a></li>
-						</ul>
-					</div>
-					<div class="col">
-						<h3 class="col__head">Follow</h3>
-						<ul class="col__ul">
-							<li class="col__li"><a class="col__a fa fa-facebook" href="#"></a></li>
-							<li class="col__li"><a class="col__a fa fa-twitter" href="#"></a></li>
-							<li class="col__li"><a class="col__a fa fa-google" href="#"></a></li>
-						</ul>
-					</div>
-					<button class="btn fa fa-sort-asc" onclick="goTop(1000)"></button>
-					<p class="end-laptop">Copyright © 2013 Aquasto </p>
-				</div>
+					<h4 class="footer__end">Copyright © 2013 Aquasto </h4>
 			</footer>
 			<div class="fixedDiv">
 				<div class="fixedDiv__container">

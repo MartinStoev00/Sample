@@ -44,17 +44,12 @@ let toggle = false,
     linksA = document.querySelectorAll(".links__a"),
     linksX = document.querySelector(".links__X"),
     linksLi = document.querySelectorAll(".links__li"),
-    linksTri = document.querySelector(".links__triangle"),
     linksInp = document.querySelector(".search__input"),
-    linksBtn = document.querySelector(".links__btn"),
     appear = function() {
         if ($(window).width() < 1024) {
             setTimeout(function() {
                 cover.style.height = "calc(100vh)";
                 linksInp.style.backgroundColor = "#CFD8FD";
-                linksBtn.style.backgroundColor = "#CFD8FD";
-                linksBtn.style.color = "#fff";
-                linksTri.style.opacity = "1";
             }, 230);
             setTimeout(function() {
                 if ($(window).width() > 500) {
@@ -91,9 +86,6 @@ let toggle = false,
                 links.style.height = "0px";
             }, 100);
             setTimeout(function() {
-                linksTri.style.opacity = "0";
-            }, 130);
-            setTimeout(function() {
                 cover.style.height = "0px";
             }, 230);
             setTimeout(function() {
@@ -105,11 +97,7 @@ let toggle = false,
             }, 300);
             setTimeout(function() {
                 linksInp.style.backgroundColor = "lighten(#CFD8FD, 4%)";
-                linksBtn.style.backgroundColor = "#ddd";
             }, 350);
-            setTimeout(function() {
-                linksBtn.style.color = "#111";
-            }, 400);
 
             toggle = false;
         }
@@ -124,7 +112,7 @@ let toggle = false,
         }
     };
 $(window).scroll(function() {
-    if ($(window).width() < 1024 && $(window).scrollTop() > 100) {
+    if ($(window).width() < 1024 && $(window).scrollTop() >30) {
         hide();
     }
 });

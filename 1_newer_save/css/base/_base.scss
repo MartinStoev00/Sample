@@ -8,21 +8,12 @@
 .phone__cover {
 	z-index: 48;
 }
-.links__btn,
-.search__input {
-	position: relative;
-	z-index: 49;
+.logo, .search__input, .search__btn {
+	z-index: 101;
 }
 .links,
-.links__triangle,
 .links__X {
 	z-index: 49;
-}
-.links__X {
-	z-index: 50;
-}
-.footer {
-	z-index: -3;
 }
 .phone__cover { 
 	position: fixed;
@@ -45,15 +36,7 @@ html {
 }
 .main {
 	width: 90%;
-	margin-bottom: 366px;
 	padding: 15px 5% 5px;
-}
-.footer {
-	width: calc(100vw);
-	padding-top: 40px;
-	position: fixed;
-	left: 0;
-	bottom: 0;
 }
 ul,
 li {
@@ -63,7 +46,7 @@ li {
 button,
 input {
 	border: none;
-	outline: none;
+	outline: none; 	
 }
 a {
 	text-decoration: none;
@@ -86,30 +69,19 @@ input:focus {
 :hover {
 	outline: 0px;
 }
-@include mq(landscape) {
-	.main {
-		margin-bottom: 0;
-	}
-	.footer {
-		position: relative;
-		z-index: 0;
-	}
-}
 @include mq(tablet) {
-	.header {
-		position: static;
-	}
-	.main {
-		margin-bottom: 463px;
-	}
 	.phone__cover {
 		display: none;
 		visibility: hidden;
 	}
+	.footer {
+		padding-top: 40px;
+	}
+	.logo, .search__input {
+		z-index: 0;
+	}
 	.links,
-	.search__input,
-	.links__btn {
-		position: static;
+	.search__input {
 		z-index: 0;
 	}
 }

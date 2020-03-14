@@ -2,6 +2,9 @@
 	font-weight: bold;
 	font-size: calc(20px + (100vw - 320px)/10);
 }
+.links__X {
+	font-family: arial;
+}
 .search__input {
 	font-family: Helvetica, 'FontAwesome', sans-serif;
 	font-size: 18px;
@@ -9,10 +12,6 @@
 .search__input::placeholder {
 	font-size: 18px;
 	margin-top: 2px;
-}
-.anchor__li{
-	font-size: 16px;
-	font-weight: bold;
 }
 .content__head{
 	font-size: 27px;
@@ -23,11 +22,22 @@
 .first-line{
 	font-size: 25px;
 }
+.footer {
+	&__btn {
+		font-size: 30px;
+	}
+	&__li {
+		font-size: 20px;
+	}
+	&__text {
+		font-size: 20px;
+	}
+	&__text::first-line {
+		font-size: 25px;
+	}
+}
 .second-line{
 	font-size: 20px;
-}
-.footer__phone{
-	font-size: calc(15px + (100vw - 320px)/25);
 }
 @include mq(landscape) {
 	.links__li{
@@ -35,6 +45,17 @@
 	}
 }
 @include mq(tablet) {
+	.footer {
+		&__li {
+			font-size: 25px;
+		}
+		&__text {
+			font-size: 25px;
+		}
+		&__text::first-line {
+			font-size: 30px;
+		}
+	}
 	.links {
 		font-family: arial;
 	}
@@ -58,9 +79,6 @@
 	.links__a {
 		font-size: 14px;
 		font-weight: 100;
-	}
-	.anchor__li {
-		font-size: calc((100vw/6 - 20px)/10);
 	}
 	.content__head {
 		font-size: 30px;

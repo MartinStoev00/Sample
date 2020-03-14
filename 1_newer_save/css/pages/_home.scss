@@ -8,10 +8,10 @@
 		flex-direction: column;
 		justify-content: space-between;
 		width: calc(100%);
-		margin: 5px 0px;
+		margin: 15px 0px;
 		padding: 3px;
 		border: 2px solid $c-l;
-		border-radius: 5px;
+		border-radius: 10px;
 		box-sizing: border-box;
 	}
 	&__head {
@@ -33,10 +33,9 @@
 }
 .box {
 	@include shadow(mid);
-	width: 96%;
+	width: 100%;
 	margin: 20px auto;
-	border: 1px solid white;
-	border-radius: 10px;
+	@include radius(10px);
 	&__head {
 		margin: 25px;
 		text-align: center;
