@@ -42,22 +42,16 @@
     &:hover,
     &:focus {
       @include shadow(mid);
-      background-color: $c-m;
+      background-color: lighten($c-m, 5%);
       color: black;
     }
   }
   &__search {
-    &__input  {
+    &-input  {
       &:hover,
       &:focus {
         background-color: $c-l;
         @include shadow(outline);
-      }
-    }
-    &-btn {
-      &:hover,
-      &:focus {
-        background-color: darken($c-l, 5%);
       }
     }
   }
@@ -79,10 +73,8 @@
       text-shadow: 1px 1px $sh-d;
     }
   }
-  .col__a:hover,
-  .col__a:focus,
-  .btn:hover,
-  .btn:focus {
+  .footer__li .fa:hover,
+  .footer__li .fa:focus {
     cursor: pointer;
     color: $c-m;
     text-shadow: 0px 0px 5px $c-t-l;

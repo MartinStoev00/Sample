@@ -8,7 +8,7 @@
 	background-color: lighten($c-l, 4% );
 }
 .search__btn {
-	background-color: $transperant;
+	background-color: $transparent;
 }
 .content__box {
 	background-color: $c-l;
@@ -39,6 +39,12 @@
 }
 .fixedDiv{
 	background-color: $c-t-m;
+	&__search-input {
+		background-color: lighten($c-l, 4% );
+	}
+	[type = "submit"] {
+		background-color: $transparent;
+	}
 }
 @include mq(tablet) {
 	.box {

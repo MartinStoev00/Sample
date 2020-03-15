@@ -1,6 +1,4 @@
-.links__li,
-.first-line,
-.second-line {
+.links__li {
 	color: #111;
 }
 .links__X {
@@ -12,8 +10,7 @@
 .footer *{
 	color: white;
 }
-.content__head,
-.first-line {
+.content__head {
 	font-weight: 600;
 }
 @include mq(tablet) {

@@ -1,6 +1,10 @@
+.header {
+	@include shadow(mid);
+}
 .logo {
 	width: 85%;
 	margin: 15px 7.5% 0px;
+	position: relative;
 }
 .search {
 	@include flex(center);
@@ -37,6 +41,7 @@
 		padding: 20px;
 	}
 	.logo {
+		position: static;
 		width: calc(20vw);
 		margin: 0;
 	}

@@ -8,10 +8,10 @@
 .search__input {
 	font-family: Helvetica, 'FontAwesome', sans-serif;
 	font-size: 18px;
-}
-.search__input::placeholder {
-	font-size: 18px;
-	margin-top: 2px;
+	.search__input::placeholder {
+		font-size: 18px;
+		margin-top: 2px;
+	}
 }
 .content__head{
 	font-size: 27px;
@@ -19,25 +19,16 @@
 .box__text{
 	font-size: 16.5px;
 }
-.first-line{
-	font-size: 25px;
-}
 .footer {
 	&__btn {
 		font-size: 30px;
 	}
-	&__li {
-		font-size: 20px;
-	}
 	&__text {
 		font-size: 20px;
+		&::first-line {
+			font-size: 25px;
+		}
 	}
-	&__text::first-line {
-		font-size: 25px;
-	}
-}
-.second-line{
-	font-size: 20px;
 }
 @include mq(landscape) {
 	.links__li{
@@ -46,14 +37,11 @@
 }
 @include mq(tablet) {
 	.footer {
-		&__li {
-			font-size: 25px;
-		}
 		&__text {
 			font-size: 25px;
-		}
-		&__text::first-line {
-			font-size: 30px;
+			&::first-line {
+				font-size: 30px;
+			}
 		}
 	}
 	.links {
@@ -64,15 +52,6 @@
 	}
 	.links__li{
 		font-size: 12px;
-	}
-	.end-laptop {
-		font-size: 10px;
-	}
-	.col__head {
-		font-size: 40px;
-	}
-	.col__li {
-		font-size: 25px;
 	}
 }
 @include mq(laptop) {
@@ -91,9 +70,6 @@
 	}
 	.box__text {
 		font-size: 25px;
-	}
-	.col__li {
-		font-size: 33px;
 	}
 	.fixedDiv__search-input::placeholder {
 		font-size: 17px;

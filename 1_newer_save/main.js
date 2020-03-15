@@ -15,13 +15,13 @@ $(document).on('click', 'a[href^="#"]', function(event) {
 
 //fixedDiv
 $(window).scroll(function() {
-    if ($(window).width() <= 1024) {
+    if ($(window).width() < 1024) {
         if ($(window).scrollTop() > $(".header").outerHeight()) {
             fixedDiv.style.opacity = "1";
         } else {
             fixedDiv.style.opacity = "0";
         }
-    } else if ($(window).width() >= 1024) {
+    } else {
         if ($(window).scrollTop() > $(".header").outerHeight()) {
             fixedDiv.style.display = "block";
             setTimeout(function() {

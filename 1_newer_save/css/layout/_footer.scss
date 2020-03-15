@@ -1,4 +1,5 @@
 .footer {
+	padding: 10px;
 	&__btn {
 		@include size(45px);
 		@include radius(26px);
@@ -8,34 +9,41 @@
 	&__text {
 		text-align: center;
 		padding: 10px;
-	}
-	&__text:nth-child(1) {
-		grid-area: address;
-	}
-	&__text:nth-child(2) {
-		grid-area: phones;
+		&:nth-child(1) {
+			grid-area: address;
+		}
+		&:nth-child(2) {
+			grid-area: phones;
+		}
 	}
 	&__ul {
-		@include flex(row);
+		@include flex(column);
 		grid-area: media;
+		margin-right: 20px;
+		&-li {
+			@include flex(row);
+			@include size(30px);
+			@include sideRaduis(center, 26px);
+			background-color: #444;
+			padding: 7px;
+		}
 	}
-	&__li {
-		@include flex(row);
-		@include size(30px);
-		@include radius(26px);
-		padding: 7px;
+	&__other {
+		display: none;
+		grid-area: other;
 	}
 	&__container {
 		display: grid;
 		grid-template-areas:
-	  	'address'
-	  	'phones'
-	  	'media';
-	  	grid-gap: 20px;
+	  	'address media'
+	  	'phones media';
 	}
-	&__end {
-		margin: 10px 10px 0px;
-		text-align: center;
+	&::after {
+		display: block;
+		content: 'Copyright © 2013 Aquasto';
+		color: #fff;
+		padding-top: 20px;
+		padding-left: calc(50vw - 90px);
 	}
 }
 @include mq(landscape) {
@@ -52,29 +60,67 @@
 			line-height: 45px;
 		}
 		&__ul {
+			@include flex(column);
 			width: calc(100vw/3 - 40px);
+			&-li {
+				border: none;	
+			.fa {
+				&-facebook::after {
+					padding: 8px;
+					content: 'Facebook';
+				}
+				&-twitter::after {
+					padding: 8px;
+					content: 'Twitter';
+				}
+				&-google::after {
+					padding: 8px;
+					content: 'Google';
+				}
+			}
+			}
 		}
 	}
 }
 @include mq(tablet) {
 	.footer {
-		&__ul {
-			@include flex(column);
-			width: calc(100vw/3 - 40px);
+		&__btn {
+			display: none;
 		}
-		&__li {
-			border: none;
-		}
-		&__text {
-			width: calc(100vw/3 - 40px);	
-			line-height: 55px;
+	}
+}
+@include mq(laptop) {
+	.footer {
+		&__btn {
+			display: none;
 		}
 		&__container {
 			grid-template-areas:
-		  	'address phones media';
+		  	'address media'
+		  	'phones other';
+		  	grid-gap: 0px;
 		}
-		&__btn {
-			display: none;
+		&__text {
+			width: calc(100vw/3 - 40px);	
+			line-height: 35px;
+			&::first-line {
+				line-height: 55px;
+			}
+		}
+		&__ul {
+			@include flex(column);
+			width: calc(100vw/3 - 40px);
+			&-li {
+				border: none;
+				background-color: $transparent;
+			}
+		}
+		&__other {
+			@include mq(column);
+			display: block;
+			&-img {
+				width: calc(40vw);
+			}
 		}
 		.fa {
 			&-facebook::after {

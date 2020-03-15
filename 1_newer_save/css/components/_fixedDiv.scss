@@ -37,7 +37,7 @@
 @include mq(landscape) {
 	.fixedDiv {
 		&__img {
-			width: calc(30vw);
+			width: calc(22vw);
 		}
 		&__search {
 			display: flex;
@@ -48,10 +48,11 @@
 				width: calc(100% - 75px);
 				height: 15px;
 				padding: 15px;
-				border-radius: 23px 0px 0px 23px;
+				border-radius: 23px;
 			}
 			&-btn {
 				@include size(45px);
+				margin-left: -50px;
 				border-radius: 0px 23px 23px 0px;
 			}
 		}
@@ -78,6 +79,7 @@
 		z-index: 100;
 		[type = "submit"] {
 			display: inline-block;
+			margin-left: -50px;
 		}
 		[onclick = "go()"] {
 			display: none;
@@ -86,7 +88,7 @@
 			@include flex(row);
 		}
 		&__search {
-			width: calc(26vw);
+			width: calc(23vw);
 			display: flex;
 			justify-content: center;
 			&-input {
@@ -94,7 +96,7 @@
 				width: calc(100% - 75px);
 				height: 15px;
 				padding: 15px;
-				border-radius: 23px 0px 0px 23px;
+				border-radius: 23px;
 			}
 			&-btn {
 				border-radius: 0px 23px 23px 0px;
@@ -105,11 +107,11 @@
 		}
 		&__ul {
 			@include flex(row);
-			width: calc(52vw);
+			width: calc(60vw);
 		}
 		&__li {
-			padding: 5px;
-			border-radius: 5px;
+			padding: 10px;
+			border-radius: 10px;
 		}
 	}
 }
