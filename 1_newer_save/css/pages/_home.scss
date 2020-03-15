@@ -30,10 +30,11 @@
 }
 .box {
 	@include shadow(mid);
+	@include radius(10px);
 	width: 100%;
 	margin: 20px auto;
-	@include radius(10px);
-	&__head {
+	padding: 10px;
+	& > &__head {
 		margin: 25px;
 		text-align: center;
 	}
@@ -44,9 +45,14 @@
 	}
 	&__text{
 		margin: 5px;
-		padding: 5px;
+		padding: 7px;
 		border-radius: 5px;
 		text-align: justify;
+		&-container {
+			.box__head {
+				display: none;
+			}
+		}
 	}
 }
 @include mq(landscape) {
@@ -116,11 +122,11 @@
 		}
 	}
 	.box {
-		padding: 50px 0;
+		padding: 130px 0 30px;
 		border: none;
 		box-shadow: none;
-		&__head {
-			padding: 30px 0;
+		& > &__head {
+			display: none;
 		}
 		&__container {
 			@include flex(center);
@@ -135,6 +141,9 @@
 				margin: 40px;
 				width: calc(40% - 40px);
 				@include flex(column);
+				.box__head {
+					display: block;
+				}
 			}
 		}
 	}
