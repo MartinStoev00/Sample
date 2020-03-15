@@ -439,6 +439,7 @@ input:focus {
     display: none; }
   .links__a {
     padding-bottom: calc((100vh - 21vw - 125px)/12 - 11px);
+    text-decoration: underline;
     z-index: 101; }
 
 @media (orientation: landscape) and (max-height: 470px) {
@@ -609,17 +610,16 @@ input:focus {
   border: 1px solid #fff;
   border-radius: 10px;
   width: 100%;
-  margin: 20px auto;
-  padding: 10px; }
+  margin: 20px auto; }
   .box > .box__head {
-    margin: 25px;
+    margin: 10px 0px 0px;
     text-align: center; }
   .box__img {
     width: calc(100% - 20px);
     margin: 10px;
     border-radius: 7px; }
   .box__text {
-    margin: 5px;
+    margin: 20px 5px;
     padding: 7px;
     border-radius: 5px;
     text-align: justify; }

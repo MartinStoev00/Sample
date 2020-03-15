@@ -33,9 +33,8 @@
 	@include radius(10px);
 	width: 100%;
 	margin: 20px auto;
-	padding: 10px;
 	& > &__head {
-		margin: 25px;
+		margin: 10px 0px 0px;
 		text-align: center;
 	}
 	&__img{
@@ -44,7 +43,7 @@
 		border-radius: 7px;
 	}
 	&__text{
-		margin: 5px;
+		margin: 20px 5px;
 		padding: 7px;
 		border-radius: 5px;
 		text-align: justify;
